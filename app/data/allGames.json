@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Call of Duty: Vanguard",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image1-newgame.png"
+  },
+  {
+    "name": "FIFA 22",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image2-newgame.png"
+  },
+  {
+    "name": "GOFTG",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image3-newgame.png"
+  },
+  {
+    "name": "Alan Awaked",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image4-newgame.png"
+  },
+  {
+    "name": "Alan Awaked",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One",
+    "imgSrc": "/images/image4-newgame.png"
+  },
+  {
+    "name": "Far Cry 6",
+    "activision": "activision",
+    "gameCategories": "PS5",
+    "imgSrc": "/images/image5-newgame.png"
+  },
+  {
+    "name": "Prince of Persia",
+    "activision": "activision",
+    "gameCategories": "PS4, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image6-newgame.png"
+  },
+  {
+    "name": "Dead Island 2",
+    "activision": "activision",
+    "gameCategories": "PS4, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image7-newgame.png"
+  },
+  {
+    "name": "Saint Row",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image8-newgame.png"
+  },
+  {
+    "name": "Saint Row",
+    "activision": "activision",
+    "gameCategories": "PS5, Xbox One, Xbox Series X",
+    "imgSrc": "/images/image8-newgame.png"
+  }
+]
