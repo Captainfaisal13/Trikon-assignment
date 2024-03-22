@@ -10,17 +10,33 @@ const GameInfo = ({ montserrat, righteous }) => {
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 xl:gap-12 justify-center">
         <div className="flex flex-col gap-2 md:gap-3">
           <div className="md:w-full h-[150px] md:h-[220px] lg:w-[612px] lg:h-[270px] xl:w-[773px] xl:h-[335px] rounded-[20px] relative">
-            <Image src="/images/image1-game-info.png" fill />
+            <Image
+              src="/images/image1-game-info.png"
+              fill
+              alt="game-info-image1"
+            />
           </div>
           <div className="flex justify-between gap-2 md:gap-4">
             <div className="basis-1/3 lg:basis-auto h-[90px] md:h-[128px] lg:w-[188px] lg:h-[170px] xl:w-[245px] xl:h-[204px] rounded-[20px] relative">
-              <Image src="/images/image2-game-info.png" fill />
+              <Image
+                src="/images/image2-game-info.png"
+                fill
+                alt="game-info-image2"
+              />
             </div>
             <div className="basis-1/3 lg:basis-auto h-[90px] md:h-[128px] lg:w-[188px] lg:h-[170px] xl:w-[245px] xl:h-[204px] rounded-[20px] relative">
-              <Image src="/images/image3-game-info.png" fill />
+              <Image
+                src="/images/image3-game-info.png"
+                fill
+                alt="game-info-image3"
+              />
             </div>
             <div className="basis-1/3 lg:basis-auto h-[90px] md:h-[128px] lg:w-[188px] lg:h-[170px] xl:w-[245px] xl:h-[204px] rounded-[20px] relative">
-              <Image src="/images/image4-game-info.png" fill />
+              <Image
+                src="/images/image4-game-info.png"
+                fill
+                alt="game-info-image4"
+              />
             </div>
           </div>
         </div>

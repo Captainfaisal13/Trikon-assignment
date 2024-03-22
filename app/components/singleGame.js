@@ -8,7 +8,7 @@ const SingleGame = ({ game, helvetica }) => {
       className={`text-white ${helvetica.className} w-[160x] sm:w-[200px] lg:w-[250px] mx-auto`}
     >
       <div className="h-[160px] sm:h-[180px] lg:h-[237px] relative">
-        <Image src={imgSrc} fill />
+        <Image src={imgSrc} fill alt="game-image" />
       </div>
 
       <div

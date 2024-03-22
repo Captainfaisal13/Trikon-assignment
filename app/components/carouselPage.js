@@ -12,26 +12,17 @@ function getWindowDimensions() {
   };
 }
 
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
+const CarouselPage = ({ galactus, montserrat, righteous }) => {
+  const [currentGameIndex, setCurrentGameIndex] = useState(0);
+  const [width, setWidth] = useState(null);
   useEffect(() => {
     function handleResize() {
-      setWindowDimensions(getWindowDimensions());
+      setWidth(getWindowDimensions().width);
     }
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  return windowDimensions;
-}
-
-const CarouselPage = ({ galactus, montserrat, righteous }) => {
-  const [currentGameIndex, setCurrentGameIndex] = useState(0);
-  const { width } = useWindowDimensions();
 
   return (
     <div className="w-full flex flex-col gap-8 lg:gap-0 lg:flex-row justify-evenly pb-14 lg:pb-28">
@@ -76,7 +67,7 @@ const CarouselPage = ({ galactus, montserrat, righteous }) => {
                   // transition: "1s ease",
                 }}
               >
-                <Image key={index} src={src} fill />;
+                <Image key={index} src={src} fill alt="carousel-image" />;
               </div>
             );
           })}
@@ -90,7 +81,12 @@ const CarouselPage = ({ galactus, montserrat, righteous }) => {
               })
             }
           >
-            <Image src="/images/btn-left-arrow.png" width="48" height="48" />
+            <Image
+              src="/images/btn-left-arrow.png"
+              width="48"
+              height="48"
+              alt="left-arrow-carousel"
+            />
           </button>
           <button
             onClick={() =>
@@ -100,7 +96,12 @@ const CarouselPage = ({ galactus, montserrat, righteous }) => {
               })
             }
           >
-            <Image src="/images/btn-right-arrow.png" width="48" height="48" />
+            <Image
+              src="/images/btn-right-arrow.png"
+              width="48"
+              height="48"
+              alt="right-arrow-carousel"
+            />
           </button>
         </div>
       </div>

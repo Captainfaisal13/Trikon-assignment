@@ -26,7 +26,7 @@ const CallToAction = ({ galactus, montserrat, righteous }) => {
         </div>
       </div>
       <div className="lg:basis-3/5 relative w-full h-[300px] lg:w-[867px] lg:h-[483px] rounded-[477px]">
-        <Image src="/images/image-coa.png" fill />
+        <Image src="/images/image-coa.png" fill alt="call-to-action image" />
       </div>
     </div>
   );
