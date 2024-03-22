@@ -1,17 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import carouselImages from "../data/carouselImages.json";
 import ActionButton from "./actionButton";
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
 const CarouselPage = ({ galactus, montserrat, righteous }) => {
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
+  const { width } = useWindowDimensions();
+
   return (
     <div className="w-full flex flex-col gap-8 lg:gap-0 lg:flex-row justify-evenly pb-14 lg:pb-28">
       <div className="px-4 lg:px-[1.5rem] xl:px-[5rem] pt-10 lg:pt-12 xl:pt-20 basis-2/5">
         <div className="text-center lg:text-left">
           <h3
-            className={`text-[#bccf9e] ${galactus.className} text-[14px] xl:text-[16px] xl:leading-4 mb-3 lg:mb-4 xl:mb-8`}
+            className={`text-[#BEF56E] ${galactus.className} text-[14px] xl:text-[16px] xl:leading-4 mb-3 lg:mb-4 xl:mb-8`}
           >
             EXPLORE A NEW DIMENSION
           </h3>
@@ -42,7 +69,11 @@ const CarouselPage = ({ galactus, montserrat, righteous }) => {
                 className="min-w-[288px] min-h-[188px] lg:min-w-[388px] lg:min-h-[288px] xl:min-w-[488px] xl:min-h-[388px] relative inner rounded-xl overflow-hidden"
                 key={index}
                 style={{
-                  transform: `translate(-${currentGameIndex * (488 + 16)}px)`,
+                  transform: `translate(-${
+                    currentGameIndex *
+                    (width > 1280 ? 504 : width > 1024 ? 404 : 296)
+                  }px)`,
+                  // transition: "1s ease",
                 }}
               >
                 <Image key={index} src={src} fill />;
