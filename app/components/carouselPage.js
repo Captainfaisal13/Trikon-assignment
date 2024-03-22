@@ -7,7 +7,7 @@ import ActionButton from "./actionButton";
 const CarouselPage = ({ galactus, montserrat, righteous }) => {
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   return (
-    <div className="w-full flex flex-col gap-8 lg:gap-0 lg:flex-row justify-evenly pb-10 lg:pb-28">
+    <div className="w-full flex flex-col gap-8 lg:gap-0 lg:flex-row justify-evenly pb-14 lg:pb-28">
       <div className="px-4 lg:px-[1.5rem] xl:px-[5rem] pt-10 lg:pt-12 xl:pt-20 basis-2/5">
         <div className="text-center lg:text-left">
           <h3

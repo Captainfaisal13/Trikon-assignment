@@ -5,14 +5,14 @@ const GameCategories = ({ montserrat, helvetica }) => {
   const [gameType, setGameType] = useState(0);
 
   return (
-    <div className="bg-[url('/images/image.png')] bg-no-repeat bg-cover bg-center pt-20 pb-24">
+    <div className="bg-[url('/images/image.png')] bg-no-repeat bg-cover bg-center pt-10 md:pt-20 pb-10 md:pb-24">
       <div>
         <h3
-          className={`text-white ${montserrat.className} text-[30px] leading-[48px] text-center mb-4`}
+          className={`text-white ${montserrat.className} text-2xl md:text-[26px] lg:text-[30px] leading-[48px] text-center mb-4`}
         >
           Newly Released Games
         </h3>
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-8 md:mb-12">
           <button
             className={`${montserrat.className} text-[14px] leading-[17.07px] ${
               gameType === 0 ? "bg-[#F68E5F]" : "bg-none"
@@ -46,7 +46,7 @@ const GameCategories = ({ montserrat, helvetica }) => {
             X-Box
           </button>
         </div>
-        <div className="grid grid-cols-5 gap-y-[72px] max-w-[94vw] mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-[24px] sm:gap-y-[56px] md:gap-y-[72px] max-w-[94vw] mx-auto">
           {allGames.map((game, idx) => {
             if (
               (gameType === 1 &&
