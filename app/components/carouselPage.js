@@ -19,7 +19,7 @@ const CarouselPage = ({ galactus, montserrat, righteous }) => {
     function handleResize() {
       setWidth(getWindowDimensions().width);
     }
-
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
